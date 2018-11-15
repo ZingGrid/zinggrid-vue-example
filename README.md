@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+![](zg-framework-demo.gif)
+
 ## Build Setup
 
 ``` bash
