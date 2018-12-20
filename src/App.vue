@@ -4,6 +4,7 @@
       <router-link to="/">Read Only</router-link>
       <router-link to="/datachange">Two Way Data Binding</router-link>
       <router-link to="/ajax">Ajax</router-link>
+      <router-link to="/ssr">SSR</router-link>
       <router-link to="/methods">Methods</router-link>
       <router-link to="/events">Events</router-link>
     </nav>
@@ -22,7 +23,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }

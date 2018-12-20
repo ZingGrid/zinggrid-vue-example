@@ -4,6 +4,11 @@
       caption="Hello World"
       :data="stringData"
       :theme="theme">
+      <zg-colgroup>
+        <zg-column index="0" header="Column 1"></zg-column>
+        <zg-column index="1" header="Column 2"></zg-column>
+        <zg-column index="2" header="Column 3"></zg-column>
+      </zg-colgroup>
     </zing-grid>
 
     <br>

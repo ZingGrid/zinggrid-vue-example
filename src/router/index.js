@@ -7,6 +7,7 @@ import TwoWayDataBinding from '@/components/two_way_data_binding'
 import Methods from '@/components/methods'
 import Events from '@/components/events'
 import Ajax from '@/components/ajax'
+import SSR from '@/components/ssr'
 
 Vue.use(Router)
 
@@ -26,6 +27,11 @@ export default new Router({
       path: '/ajax',
       name: 'ajax',
       component: Ajax
+    },
+    {
+      path: '/ssr',
+      name: 'ssr',
+      component: SSR
     },
     {
       path: '/methods',
