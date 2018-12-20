@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import ZingGrid from 'zinggrid';
 export default {
   data () {
     return {
