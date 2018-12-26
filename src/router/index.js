@@ -2,12 +2,13 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // import all routes
-import ReadOnly from '@/components/read_only'
-import TwoWayDataBinding from '@/components/two_way_data_binding'
-import Methods from '@/components/methods'
-import Events from '@/components/events'
-import Ajax from '@/components/ajax'
-import SSR from '@/components/ssr'
+import ReadOnly from '@/components/read_only';
+import OneWayDataBinding from '@/components/one_way_data_binding';
+import TwoWayDataBinding from '@/components/two_way_data_binding';
+import Methods from '@/components/methods';
+import Events from '@/components/events';
+import Ajax from '@/components/ajax';
+import SSR from '@/components/ssr';
 
 Vue.use(Router)
 
@@ -19,7 +20,12 @@ export default new Router({
       component: ReadOnly
     },
     {
-      path: '/datachange',
+      path: '/attribute-change',
+      name: 'one-way-data-binding',
+      component: OneWayDataBinding
+    },
+    {
+      path: '/data-change',
       name: 'two-way-data-binding',
       component: TwoWayDataBinding
     },

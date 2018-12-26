@@ -2,7 +2,8 @@
   <div id="app">
     <nav>
       <router-link to="/">Read Only</router-link>
-      <router-link to="/datachange">Two Way Data Binding</router-link>
+      <router-link to="/attribute-change">One Way Data Binding</router-link>
+      <router-link to="/data-change">Two Way Data Binding</router-link>
       <router-link to="/ajax">Ajax</router-link>
       <router-link to="/ssr">SSR</router-link>
       <router-link to="/methods">Methods</router-link>

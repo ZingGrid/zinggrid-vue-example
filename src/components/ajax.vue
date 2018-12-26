@@ -1,10 +1,13 @@
 <template>
   <div>
+    <!-- 
+      adding loading attribute before grid load is a native way to style the grid
+      in a loading state. This is useful if you know the data is being fetched. -->
     <zing-grid 
       ref="ajaxGrid" 
       caption="Shows" 
-      :data="datastore" 
-      editor>
+      editor
+      loading>
     </zing-grid>
 
   </div>
@@ -13,11 +16,6 @@
 <script>
 import ZingGrid from 'zinggrid';
 export default {
-  data () {
-    return {
-      datastore: [],
-    }
-  },
   mounted() {
     const _this = this;
     // must stringify data for component/HTML attributes
@@ -36,8 +34,11 @@ export default {
       })
       .then(gridData => {
         // if we made it here great news
-        console.log(gridData)
-        _this.datastore = JSON.stringify(gridData.shows);
+        console.log(gridData);
+        // purposely timeout so the loading screen displays longer
+        setTimeout(() => {
+          _this.$refs.ajaxGrid.setData(gridData.shows);
+        }, 2000);
       })
       .catch(err => {
         console.log(err)
@@ -51,22 +52,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#eventLog {
-    background: black;
-    color: white;
-    width: 370px;
-    min-height: 225px;
-    padding: 10px;
-    margin-top: 20px;
-    font-family: monospace;
-    line-height: 1.5;
-}
-
-.wordwrap { 
-    white-space: pre-wrap;      /* CSS3 */   
-    white-space: -moz-pre-wrap; /* Firefox */    
-    white-space: -pre-wrap;     /* Opera <7 */   
-    white-space: -o-pre-wrap;   /* Opera 7 */    
-    word-wrap: break-word;      /* IE */
- }
+  /*  while the grid is in a loading state give it a default height to prevent screen jank */
+  zing-grid[loading] {
+    height:500px;
+  }
 </style>

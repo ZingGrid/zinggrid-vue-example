@@ -1,8 +1,8 @@
 <template>
   <div>
     <zing-grid
+      ref="firstGrid"
       caption="Hello World"
-      :data="stringData"
       :theme="theme">
       <zg-colgroup>
         <zg-column index="0" header="Column 1"></zg-column>
@@ -13,7 +13,7 @@
 
     <br>
     <hr>
-    <select @change="updateGridTheme">
+    <select v-model="theme">
       <option value="default">Default</option>
       <option value="android">Android</option>
       <option value="ios">IOS</option>
@@ -34,19 +34,12 @@ export default {
         [1,2,3], 
         [4,5,6]
       ],
-      stringData: [],
     }
   },
   mounted() {
-    // must stringify data for component/HTML attributes
-    this.stringData = JSON.stringify(this.datastore);
+    // this.stringData = JSON.stringify(this.datastore);
+    this.$refs.firstGrid.setData(this.datastore);
   },
-  methods: {
-    updateGridTheme(e) {
-      let newThemeValue = e.target.value;
-      this.theme = newThemeValue;
-    }
-  }
 }
 </script>
 
