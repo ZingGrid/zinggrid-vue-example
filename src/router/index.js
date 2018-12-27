@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // import all routes
-import ReadOnly from '@/components/read_only';
+import readOnly from '@/components/read_only';
 import OneWayDataBinding from '@/components/one_way_data_binding';
 import TwoWayDataBinding from '@/components/two_way_data_binding';
 import Methods from '@/components/methods';
@@ -16,8 +16,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'readonly',
-      component: ReadOnly
+      name: 'read-only',
+      component: readOnly
     },
     {
       path: '/attribute-change',

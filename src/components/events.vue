@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>Click around on the grid to trigger events in the console. Read more about ZingGrid events <a href="https://www.zinggrid.com/docs/api-events" target="_blank">here.</a></p>
     <zing-grid 
       ref="eventGrid"
       caption="Events" 

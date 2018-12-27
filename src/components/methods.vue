@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>Read more about ZingGrid methods <a href="https://www.zinggrid.com/docs/api-methods" target="_blank">here.</a></p>
   <zing-grid 
     ref="methodGrid"></zing-grid>
 

@@ -1,8 +1,8 @@
-# vue-demo
+# Vue-demo with ZingGrid
 
 > A Vue.js project
 
-![](zg-framework-demo.gif)
+![](vue-demo.gif)
 
 ## Build Setup
 
